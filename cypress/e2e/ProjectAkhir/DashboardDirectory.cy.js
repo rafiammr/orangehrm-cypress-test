@@ -41,7 +41,7 @@ describe('Final Project - Directory Page Feature', () => {
         cy.contains('No Records Found').should('exist')
     })
 
-    it('TC-025 - Search by Job Title', () => {
+    it('TC-024 - Search by Job Title', () => {
         cy.intercept('GET', '**/api/v2/directory/employees**')
             .as('searchDirectory')
         DirectoryPage.clickDirectoryMenu()
@@ -51,14 +51,14 @@ describe('Final Project - Directory Page Feature', () => {
         DirectoryPage.getEmployeeList().should('exist')
     })
 
-    it('TC-027 - Search by Location', () => {
+    it('TC-025 - Search by Location', () => {
         DirectoryPage.clickDirectoryMenu()
         DirectoryPage.selectLocation('New York Sales Office')
         DirectoryPage.getSearchButton().click()
         DirectoryPage.getEmployeeList().should('exist')
     })
 
-    it('TC-024 - Reset search', () => {
+    it('TC-026 - Reset search', () => {
         cy.intercept('GET', '**/api/v2/directory/employees**').as('resetSearch')
         DirectoryPage.clickDirectoryMenu()
         DirectoryPage.searchEmployee('pet')
