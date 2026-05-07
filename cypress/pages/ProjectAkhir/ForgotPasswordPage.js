@@ -1,7 +1,7 @@
 class ForgotPasswordPage {
 
    clickForgotPasswordLink() {
-        cy.contains('Forgot your password?').click()
+        cy.contains('Forgot Your Password?').click()
     }
 
     inputUsername(username) {
