@@ -1,0 +1,31 @@
+{
+    "validUser": {
+        "username": "Admin",
+        "password": "admin123"
+    },
+
+    "invalidUser": {
+        "username": "salahUser",
+        "password": "salah123"
+    },
+
+    "usernameWithSpace": {
+        "username": "Ad min",
+        "password": "admin123"
+    },
+
+    "usernameWithLeadingTrailingSpace": {
+        "username": " Admin ",
+        "password": "admin123"
+    },
+
+    "passwordWithSpace": {
+        "username": "Admin",
+        "password": " admin123"
+    },
+
+    "caseSensitivePassword": {
+        "username": "Admin",
+        "password": "Admin123"
+    }
+}   
