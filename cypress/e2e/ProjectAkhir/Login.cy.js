@@ -19,7 +19,7 @@ describe('Final Project - Login Feature', () => {
             .should('contain', 'Dashboard')
     })
 
-    it('TC-002 - Username salah', () => {
+    it('TC-002 - Username invalid', () => {
         cy.intercept('POST', '**/auth/validate').as('failedLogin')
 
         LoginPage.login(dataUser.invalidUser.username, dataUser.validUser.password)
@@ -29,7 +29,7 @@ describe('Final Project - Login Feature', () => {
         LoginPage.getErrorMessage()
     })
 
-    it('TC-003 - Password salah', () => {
+    it('TC-003 - Password invalid', () => {
         cy.intercept('POST', '**/auth/validate').as('failedLogin')
 
         LoginPage.login(dataUser.validUser.username, dataUser.invalidUser.password)
@@ -39,7 +39,7 @@ describe('Final Project - Login Feature', () => {
         LoginPage.getErrorMessage()
     })
 
-    it('TC-004 - Username & Password salah', () => {
+    it('TC-004 - Username & Password invalid', () => {
         cy.intercept('POST', '**/auth/validate').as('failedLogin')
 
         LoginPage.login(dataUser.invalidUser.username, dataUser.invalidUser.password)
